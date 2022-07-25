@@ -10,6 +10,8 @@ import 'package:absensi_app/widgets/camera_header.dart';
 import 'package:flutter/material.dart';
 import 'package:google_ml_kit/google_ml_kit.dart';
 import 'dart:math'as math;
+
+
 class SignUp extends StatefulWidget {
   final CameraDescription cameraDescription;
   const SignUp({Key? key, required this.cameraDescription}) : super(key: key);
@@ -30,7 +32,7 @@ class _SignUpState extends State<SignUp> {
   late Future _initializeControllerFuture;
   bool cameraInitializated = false;
 
-  // switchs when the user press the camera
+  // beralih ketika pengguna menekan kamera
   bool _saving = false;
   bool _bottomSheetVisible = false;
 
@@ -44,7 +46,7 @@ class _SignUpState extends State<SignUp> {
     // TODO: implement initState
     super.initState();
 
-    /// starts the camera & start framing faces
+    /// mulai kamera & mulai membingkai wajah
     _start();
   }
 
@@ -168,7 +170,7 @@ class _SignUpState extends State<SignUp> {
 
     _cameraService.cameraController.startImageStream((image) async {
       if (_cameraService.cameraController!=null) {
-        // if its currently busy, avoids overprocessing
+        // jika saat ini sibuk, hindari pemrosesan berlebih
         if (_detectingFaces) return;
 
         _detectingFaces = true;
@@ -215,7 +217,7 @@ class _SignUpState extends State<SignUp> {
     });
     _start();
   }
-  /// handles the button pressed event
+  /// menangani acara yang ditekan tombol
   Future<bool> onShot() async {
     if (faceDetected == null) {
       showDialog(

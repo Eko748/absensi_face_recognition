@@ -11,6 +11,7 @@ import 'package:absensi_app/widgets/camera_header.dart';
 import 'package:flutter/material.dart';
 import 'package:google_ml_kit/google_ml_kit.dart';
 import 'dart:math'as math;
+
 class SignIn extends StatefulWidget {
   final CameraDescription cameraDescription;
 
@@ -131,7 +132,7 @@ class _SignInState extends State<SignIn> {
   void dispose() {
     // TODO: implement dispose
     super.dispose();
-    // Dispose of the controller when the widget is disposed.
+    // Buang pengontrol saat widget dibuang.
     _cameraService.dispose();
   }
   void _start() async {

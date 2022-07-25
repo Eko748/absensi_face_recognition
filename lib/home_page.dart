@@ -50,14 +50,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 Icons.more_vert,
                 color: Colors.black,
               ),
-              onSelected: (value) {
-                switch (value) {
-                  case 'Clear DB':
-                    DatabaseHelper _dataBaseHelper = DatabaseHelper.instance;
-                    _dataBaseHelper.deleteAll();
-                    break;
-                }
-              },
+              // onSelected: (value) {
+              //   switch (value) {
+              //     case 'Clear DB':
+              //       DatabaseHelper _dataBaseHelper = DatabaseHelper.instance;
+              //       _dataBaseHelper.deleteAll();
+              //       break;
+              //   }
+              // },
               itemBuilder: (BuildContext context) {
                 return {'Clear DB'}.map((String choice) {
                   return PopupMenuItem<String>(

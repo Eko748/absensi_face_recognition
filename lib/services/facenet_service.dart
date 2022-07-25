@@ -200,6 +200,7 @@ class FaceNetService {
       for (User u in users) {
             currDist = _euclideanDistance(u.modelData, predictedData);
             print("dataFromdatabase4==$currDist");
+            print(u.modelData);
             if (currDist <= threshold && currDist < minDist) {
               minDist = currDist;
               predRes = u;
